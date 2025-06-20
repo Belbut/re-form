@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       redirect_to new_user_path
     else
       puts user_params
-      puts @user.errors.messages
+      flash.now[:error] = @user.errors.full_messages
       render :new, status: :unprocessable_entity
     end
   end
