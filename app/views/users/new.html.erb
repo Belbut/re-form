@@ -1,16 +1,16 @@
 <h1>Hello word</h1>
 
-<form action="/users" method="post" accept-charset="UTF-8" data-turbo=false >
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<h1> Second one</h1>
 
-    <label for="username">Username:</label>
-    <input type="text" name="user[username]" id="username">
+<%= form_with model: @user do |form|%>
+<%= form.text_field :username%>
+<%= form.label :username, "Username1:"%>
 
-    <label for="email">Email</label>
-    <input type="email" name="user[email]" id="email">
+<%= form.email_field :email%>
+<%= form.label :email, "Email2:"%>
 
-    <label for="password">Password</label>
-    <input type="password" name="user[password]" id="password">
+<%= form.password_field :password%>
+<%= form.label :password, "Password2:"%>
 
-    <button type="submit">click me</button>
-</form>
+<%= form.submit "click this"%>
+<%end%>
