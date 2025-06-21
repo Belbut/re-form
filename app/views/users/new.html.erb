@@ -1,7 +1,7 @@
 <%# <h1>Hello word</h1>
 <%#    
-<%# <form action="/users" method="post" accept-charset="UTF-8" data-turbo=false >
-<%#     <input type="hidden" name="authenticity_token" value=" form_authenticity_token ">
+<%# <form action="/users" method="post" accept-charset="UTF-8" >
+<%#     <%# <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" > %>
 <%# 
 <%#     <label for="username">Username:</label>
 <%#     <input type="text" name="user[username]" id="username">
@@ -33,17 +33,17 @@
 
 
 
-<h1>Third one</h1>
-
-<%= form_tag("/users", method: "post")do%>
-<%= label_tag :username, "Username3:"%>
-<%= text_field_tag :username, "your name"%>
-
-<%= label_tag :email, "Email" %>
-<%= email_field_tag :email, "fsdafsd@gmail.com"%>
-
-<%= label_tag :password, "Password"%>
-<%= password_field_tag :password, "type password"%>
-
-<%= submit_tag "click"%>
-<% end%>
+<%#<h1>Third one</h1>
+<%#
+<%#<%= form_tag("/users", method: "post")do%>
+<%#<%= label_tag :username, "Username3:"%>
+<%#<%= text_field_tag :username, "your name"%>
+<%#
+<%#<%= label_tag :email, "Email" %>
+<%#<%= email_field_tag :email, "fsdafsd@gmail.com"%>
+<%#
+<%#<%= label_tag :password, "Password"%>
+<%#<%= password_field_tag :password, "type password"%>
+<%#
+<%#<%= submit_tag "click"%>
+<%#<% end%>
