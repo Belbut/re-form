@@ -1,0 +1,12 @@
+<h1>Lets edit user <%=@user.id%> </h1>
+<%= form_with model: @user do |form|%>
+<%= form.text_field :username%>
+<%= form.label :username, "Username1:" %>
+<%= form.email_field :email %>
+<%= form.label :email, "Email2:"%>
+
+<%= form.password_field :password%>
+<%= form.label :password, "Password2:"%>
+
+<%= form.submit "click this" %>
+<% end%>

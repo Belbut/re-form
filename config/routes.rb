@@ -11,5 +11,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root 'user#index'
-  resources :users, only: %i[new create]
+
+  #  get "/posts/:id/edit", to: "posts#edit"
+  #  put "/posts/:id", to: "posts#update"
+
+  resources :users, only: %i[new create edit update]
 end
